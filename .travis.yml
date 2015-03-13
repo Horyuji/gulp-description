@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+node_js:
+  - '0.10'
+  - '0.12'
+  - 'iojs'
+before_script:
+  - npm i -g babel
+  - npm i
+  - jspm i
+  - mkdir -p dist/lib/ dist/test/
+  - babel src/index.js --out-file dist/lib/index.js
+  - babel test/test.js --out-file dist/test/test.js
+  - mocha dist/test/test.js
+

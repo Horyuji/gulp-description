@@ -1,0 +1,36 @@
+{
+  "name": "gulp-description",
+  "version": "0.0.1",
+  "description": "gulp task description",
+  "license": "MIT",
+  "repository": "/Horyuji/gulp-description",
+  "author": {
+    "name": "Horyuji JS",
+    "email": "",
+    "url": "https://github.com/Horyuji"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "dist/lib/index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "help",
+    "transformation",
+    "javascript",
+    "ecmascript"
+  ],
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "chalk": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "test-console": "^0.7.1"
+  }
+}
