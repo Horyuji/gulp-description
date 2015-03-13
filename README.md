@@ -14,12 +14,20 @@ $ npm install --save-dev gulp-description
 
 ```js
 var gulp = require('gulp');
-var babel = require('gulp-description');
+var description = require('gulp-description');
 
-gulp.task('default', function () {
-	return gulp.src('src/app.js')
-		.pipe(babel())
-		.pipe(gulp.dest('dist'));
+gulp.task('help', function () {
+	description.help({
+    "main":[
+      "test1"
+    ],
+    "description":{
+      "test0" : "test0 description",
+      "test1" : "test1 description",
+      "test2" : "test2 description",
+      "test3" : "test3 description",
+    }
+  });
 });
 ```
 
