@@ -58,7 +58,7 @@ gulp main task list
 
 all gulp task description
 
-### main gulp task only help
+### gulp task description is main only
 
 ```javascript
   gulp.task('help',function(){
@@ -67,12 +67,12 @@ all gulp task description
 
 ```
 
-### all gulp task only help
+### all gulp task description
 
 ```javascript
 
   gulp.task('h:list',function(){
-    gulpDep.help(require('./taskDescription.json'));
+    gulpDep.all(require('./taskDescription.json'));
   });
 
 ```
@@ -82,7 +82,7 @@ all gulp task description
 ```javascript
 
   gulp.task('h:dep',function(){
-    gulpDep.help(require('./taskDescription.json'));
+    gulpDep.dependency(require('./taskDescription.json'));
   });
 
 ```
