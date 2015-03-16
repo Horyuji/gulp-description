@@ -3,7 +3,10 @@
   "version": "0.0.2",
   "description": "gulp task description",
   "license": "MIT",
-  "repository": "/Horyuji/gulp-description",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Horyuji/gulp-description.git"
+  },
   "author": {
     "name": "Horyuji JS",
     "email": "",
