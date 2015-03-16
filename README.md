@@ -1,7 +1,7 @@
 # gulp-description [![Build Status](https://travis-ci.org/Horyuji/gulp-description.svg)](https://travis-ci.org/Horyuji/gulp-description)
 
 
-description...
+it gulp help setting. the detail description for gulp all task.
 
 ## Install
 
@@ -9,15 +9,15 @@ description...
 $ npm install --save-dev gulp-description
 ```
 
-
 ## Usage
 
 ```js
+
 var gulp = require('gulp');
-var description = require('gulp-description');
+var gulpDep = require('gulp-description');
 
 gulp.task('help', function () {
-	description.help({
+  gulpDep.help({
     "main":[
       "test1"
     ],
@@ -29,9 +29,64 @@ gulp.task('help', function () {
     }
   });
 });
+
 ```
 
+### description config setting
+
+```json
+{
+  "main":[
+    "help",
+    "serve"
+  ],
+  "description":{
+    "default" : "run gulp serve task.",
+    "help" :  "view help",
+    "serve" : "start livereload development.",
+    "watch" : "subtask is livereload file watching",
+    "build" : "altJs and sass compile."
+  }
+}
+```
+
+#### main
+
+gulp main task list
+
+#### description
+
+all gulp task description
+
+### main gulp task only help
+
+```javascript
+  gulp.task('help',function(){
+    gulpDep.help(require('./taskDescription.json'));
+  });
+
+```
+
+### all gulp task only help
+
+```javascript
+
+  gulp.task('h:list',function(){
+    gulpDep.help(require('./taskDescription.json'));
+  });
+
+```
+
+### gulp task dependency state
+
+```javascript
+
+  gulp.task('h:dep',function(){
+    gulpDep.help(require('./taskDescription.json'));
+  });
+
+```
 
 ## License
 
-MIT ©
+MIT © M.Sakamaki
