@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/Users/msakamaki/.nodebrew/current/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.3.0
+3 info using node@v0.11.14
+4 verbose node symlink /Users/msakamaki/.nodebrew/current/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/msakamaki/project/FrontDevelopment/gulp-description',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/msakamaki/.npm/gulp-description/0.0.1/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/msakamaki/.npm/gulp-description/0.0.1/package.tgz',
+10 verbose tar pack   '/Users/msakamaki/project/FrontDevelopment/gulp-description' ]
+11 verbose tarball /Users/msakamaki/.npm/gulp-description/0.0.1/package.tgz
+12 verbose folder /Users/msakamaki/project/FrontDevelopment/gulp-description
+13 info prepublish gulp-description@0.0.1
+14 verbose addLocalTarball adding from inside cache /Users/msakamaki/.npm/gulp-description/0.0.1/package.tgz
+15 silly cache afterAdd gulp-description@0.0.1
+16 verbose afterAdd /Users/msakamaki/.npm/gulp-description/0.0.1/package/package.json not in flight; writing
+17 verbose afterAdd /Users/msakamaki/.npm/gulp-description/0.0.1/package/package.json written
+18 silly publish { name: 'gulp-description',
+18 silly publish   version: '0.0.1',
+18 silly publish   description: 'gulp task description',
+18 silly publish   license: 'MIT',
+18 silly publish   repository: { type: 'git', url: '/Horyuji/gulp-description' },
+18 silly publish   author: { name: 'Horyuji JS', url: 'https://github.com/Horyuji' },
+18 silly publish   engines: { node: '>=0.10.0' },
+18 silly publish   scripts: { test: 'mocha' },
+18 silly publish   files: [ 'index.js' ],
+18 silly publish   keywords:
+18 silly publish    [ 'gulpplugin',
+18 silly publish      'help',
+18 silly publish      'transformation',
+18 silly publish      'javascript',
+18 silly publish      'ecmascript' ],
+18 silly publish   dependencies: { gulp: '^3.8.11', chalk: '^1.0.0' },
+18 silly publish   devDependencies: { mocha: '*', 'test-console': '^0.7.1' },
+18 silly publish   gitHead: '957c99b01366ab96cb9d504d00c86ccd309c7b9f',
+18 silly publish   readme: '# gulp-description \n\n\ndescription...\n\n## Install\n\n```sh\n$ npm install --save-dev gulp-description\n```\n\n\n## Usage\n\n```js\nvar gulp = require(\'gulp\');\nvar description = require(\'gulp-description\');\n\ngulp.task(\'help\', function () {\n\tdescription.help({\n    "main":[\n      "test1"\n    ],\n    "description":{\n      "test0" : "test0 description",\n      "test1" : "test1 description",\n      "test2" : "test2 description",\n      "test3" : "test3 description",\n    }\n  });\n});\n```\n\n\n## License\n\nMIT ©',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   _id: 'gulp-description@0.0.1',
+18 silly publish   _shasum: '30b82c0491803028fa00e983a300d46b0cc1eff6',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name gulp-description
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/gulp-description
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/msakamaki/.npm/gulp-description/0.0.1/package.tgz
+25 verbose request uri https://registry.npmjs.org/gulp-description
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 10:51:09
+28 verbose request id dc9d1628abcdcef8
+29 http request PUT https://registry.npmjs.org/gulp-description
+30 http 403 https://registry.npmjs.org/gulp-description
+31 verbose headers { date: 'Mon, 16 Mar 2015 01:51:10 GMT',
+31 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+31 verbose headers   'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=60',
+31 verbose headers   'content-length': '3115',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   'x-served-by': 'cache-nrt6123-NRT',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1426470669.723400,VS0,VE400',
+31 verbose headers   'keep-alive': 'timeout=10, max=50',
+31 verbose headers   connection: 'Keep-Alive' }
+32 verbose request invalidating /Users/msakamaki/.npm/registry.npmjs.org/gulp-description on PUT
+33 error publish Failed PUT 403
+34 verbose stack Error: forbidden cannot modify pre-existing version: 0.0.1
+34 verbose stack old={"name":"gulp-description","version":"0.0.1","description":"gulp task description","license":"MIT","repository":{"type":"git","url":"/Horyuji/gulp-description"},"author":{"name":"Horyuji JS","url":"https://github.com/Horyuji"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["dist/lib/index.js"],"keywords":["gulpplugin","help","transformation","javascript","ecmascript"],"dependencies":{"gulp":"^3.8.11","chalk":"^1.0.0"},"devDependencies":{"mocha":"*","test-console":"^0.7.1"},"gitHead":"fdc27028fdfb1f59af3644ee3547e2d3cf1a5ceb","_id":"gulp-description@0.0.1","_shasum":"789c8eb8fa7db9ea48cb570eba129616896ca558","_from":".","_npmVersion":"2.3.0","_nodeVersion":"0.11.14","_npmUser":{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"},"maintainers":[{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"}],"dist":{"shasum":"789c8eb8fa7db9ea48cb570eba129616896ca558","tarball":"http://registry.npmjs.org/gulp-description/-/gulp-description-0.0.1.tgz"}}
+34 verbose stack new={"name":"gulp-description","version":"0.0.1","description":"gulp task description","license":"MIT","repository":{"type":"git","url":"/Horyuji/gulp-description"},"author":{"name":"Horyuji JS","url":"https://github.com/Horyuji"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["index.js"],"keywords":["gulpplugin","help","transformation","javascript","ecmascript"],"dependencies":{"gulp":"^3.8.11","chalk":"^1.0.0"},"devDependencies":{"mocha":"*","test-console":"^0.7.1"},"gitHead":"957c99b01366ab96cb9d504d00c86ccd309c7b9f","readme":"# gulp-description \u000a\u000a\u000adescription...\u000a\u000a## Install\u000a\u000a```sh\u000a$ npm install --save-dev gulp-description\u000a```\u000a\u000a\u000a## Usage\u000a\u000a```js\u000avar gulp = require('gulp');\u000avar description = require('gulp-description');\u000a\u000agulp.task('help', function () {\u000a\u0009description.help({\u000a    \"main\":[\u000a      \"test1\"\u000a    ],\u000a    \"description\":{\u000a      \"test0\" : \"test0 description\",\u000a      \"test1\" : \"test1 description\",\u000a      \"test2\" : \"test2 description\",\u000a      \"test3\" : \"test3 description\",\u000a    }\u000a  });\u000a});\u000a```\u000a\u000a\u000a## License\u000a\u000aMIT ©","readmeFilename":"README.md","_id":"gulp-description@0.0.1","_shasum":"30b82c0491803028fa00e983a300d46b0cc1eff6","_from":".","_npmVersion":"2.3.0","_nodeVersion":"0.11.14","_npmUser":{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"},"maintainers":[{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"}],"dist":{"shasum":"30b82c0491803028fa00e983a300d46b0cc1eff6","tarball":"http://registry.npmjs.org/gulp-description/-/gulp-description-0.0.1.tgz"}}: gulp-description
+34 verbose stack     at CachingRegistryClient.<anonymous> (/Users/msakamaki/.nodebrew/node/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
+34 verbose stack     at Request._callback (/Users/msakamaki/.nodebrew/node/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+34 verbose stack     at Request.self.callback (/Users/msakamaki/.nodebrew/node/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:373:22)
+34 verbose stack     at Request.emit (events.js:110:17)
+34 verbose stack     at Request.<anonymous> (/Users/msakamaki/.nodebrew/node/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:1318:14)
+34 verbose stack     at Request.emit (events.js:129:20)
+34 verbose stack     at IncomingMessage.<anonymous> (/Users/msakamaki/.nodebrew/node/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:1266:12)
+34 verbose stack     at IncomingMessage.emit (events.js:129:20)
+34 verbose stack     at _stream_readable.js:907:16
+34 verbose stack     at process._tickCallback (node.js:372:11)
+35 verbose statusCode 403
+36 verbose pkgid gulp-description
+37 verbose cwd /Users/msakamaki/project/FrontDevelopment/gulp-description
+38 error Darwin 13.4.0
+39 error argv "node" "/Users/msakamaki/.nodebrew/current/bin/npm" "publish"
+40 error node v0.11.14
+41 error npm  v2.3.0
+42 error code E403
+43 error forbidden cannot modify pre-existing version: 0.0.1
+43 error old={"name":"gulp-description","version":"0.0.1","description":"gulp task description","license":"MIT","repository":{"type":"git","url":"/Horyuji/gulp-description"},"author":{"name":"Horyuji JS","url":"https://github.com/Horyuji"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["dist/lib/index.js"],"keywords":["gulpplugin","help","transformation","javascript","ecmascript"],"dependencies":{"gulp":"^3.8.11","chalk":"^1.0.0"},"devDependencies":{"mocha":"*","test-console":"^0.7.1"},"gitHead":"fdc27028fdfb1f59af3644ee3547e2d3cf1a5ceb","_id":"gulp-description@0.0.1","_shasum":"789c8eb8fa7db9ea48cb570eba129616896ca558","_from":".","_npmVersion":"2.3.0","_nodeVersion":"0.11.14","_npmUser":{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"},"maintainers":[{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"}],"dist":{"shasum":"789c8eb8fa7db9ea48cb570eba129616896ca558","tarball":"http://registry.npmjs.org/gulp-description/-/gulp-description-0.0.1.tgz"}}
+43 error new={"name":"gulp-description","version":"0.0.1","description":"gulp task description","license":"MIT","repository":{"type":"git","url":"/Horyuji/gulp-description"},"author":{"name":"Horyuji JS","url":"https://github.com/Horyuji"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["index.js"],"keywords":["gulpplugin","help","transformation","javascript","ecmascript"],"dependencies":{"gulp":"^3.8.11","chalk":"^1.0.0"},"devDependencies":{"mocha":"*","test-console":"^0.7.1"},"gitHead":"957c99b01366ab96cb9d504d00c86ccd309c7b9f","readme":"# gulp-description \u000a\u000a\u000adescription...\u000a\u000a## Install\u000a\u000a```sh\u000a$ npm install --save-dev gulp-description\u000a```\u000a\u000a\u000a## Usage\u000a\u000a```js\u000avar gulp = require('gulp');\u000avar description = require('gulp-description');\u000a\u000agulp.task('help', function () {\u000a\u0009description.help({\u000a    \"main\":[\u000a      \"test1\"\u000a    ],\u000a    \"description\":{\u000a      \"test0\" : \"test0 description\",\u000a      \"test1\" : \"test1 description\",\u000a      \"test2\" : \"test2 description\",\u000a      \"test3\" : \"test3 description\",\u000a    }\u000a  });\u000a});\u000a```\u000a\u000a\u000a## License\u000a\u000aMIT ©","readmeFilename":"README.md","_id":"gulp-description@0.0.1","_shasum":"30b82c0491803028fa00e983a300d46b0cc1eff6","_from":".","_npmVersion":"2.3.0","_nodeVersion":"0.11.14","_npmUser":{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"},"maintainers":[{"name":"m.sakamaki","email":"mail@m-sakamaki.jp"}],"dist":{"shasum":"30b82c0491803028fa00e983a300d46b0cc1eff6","tarball":"http://registry.npmjs.org/gulp-description/-/gulp-description-0.0.1.tgz"}}: gulp-description
+44 error If you need help, you may report this error at:
+44 error     <http://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]
