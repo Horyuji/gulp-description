@@ -7,7 +7,6 @@ node_js:
 before_script:
   - npm i -g babel
   - npm i
-  - jspm i
   - mkdir -p dist/lib/ dist/test/
   - babel src/index.js --out-file dist/lib/index.js
   - babel test/test.js --out-file dist/test/test.js
