@@ -16,7 +16,7 @@
     "test": "mocha"
   },
   "files": [
-    "dist/lib/index.js"
+    "index.js"
   ],
   "keywords": [
     "gulpplugin",
