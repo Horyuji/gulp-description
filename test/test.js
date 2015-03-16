@@ -26,11 +26,9 @@ describe('description console test', ()=>{
     gulp.task('test6', ()=>{});
   });
   it('should main dipendince', (done)=> {
-    gulpDipendince.help(config);
     var output = stdout.inspectSync(function() {
       gulpDipendince.help(config);
     });
-    console.log(output);
     assert.deepEqual(output, [
       '\u001b[34m\u001b[1m === Main Task === \u001b[22m\u001b[39m\n',
       '\u001b[34m\u001b[1m\u001b[4mtest1\u001b[24m\u001b[22m\u001b[39m test1 description\n' ]);
