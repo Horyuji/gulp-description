@@ -1,4 +1,4 @@
-# gulp-description 
+# gulp-description [![Build Status](https://travis-ci.org/Horyuji/gulp-description.svg)](https://travis-ci.org/Horyuji/gulp-description)
 
 
 description...
