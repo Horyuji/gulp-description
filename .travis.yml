@@ -5,6 +5,10 @@ node_js:
   - "5.1"
   - "0.12"
 before_script:
-  - npm i -g babel mocha
-  - npm i
-  - sh ./build.sh
+  - npm i -g babel mocha jscs
+  - jscs -c .jscsrc ./src/*.js
+  - jscs -c .jscsrc ./test/*.js
+  - mkdir -p dist/lib/ dist/test/
+  - babel src/index.js --out-file dist/lib/index.js
+  - babel test/test.js --out-file dist/test/test.js
+  - mocha dist/test/test.js
