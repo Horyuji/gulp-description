@@ -5,7 +5,7 @@ node_js:
   - "5.1"
   - "0.12"
 before_script:
-  - npm i -g babel mocha jscs
+  - npm i -g babel-cli mocha jscs
   - jscs -c .jscsrc ./src/*.js
   - jscs -c .jscsrc ./test/*.js
   - mkdir -p dist/lib/ dist/test/
