@@ -1,6 +1,6 @@
 {
   "name": "gulp-description",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "gulp task description",
   "license": "MIT",
   "repository": {
@@ -30,7 +30,8 @@
     "chalk": "^1.0.0"
   },
   "devDependencies": {
+    "jscs": "^2.6.0",
     "mocha": "*",
-    "test-console": "^0.7.1"
+    "test-console": "^1.0.0"
   }
 }
