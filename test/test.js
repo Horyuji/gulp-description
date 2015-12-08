@@ -32,7 +32,8 @@ describe('description console test', ()=> {
 
     assert.deepEqual(output, [
       '\u001b[34m\u001b[1m === Main Task === \u001b[22m\u001b[39m\n',
-      '\u001b[34m\u001b[1m\u001b[4mtest1\u001b[24m\u001b[22m\u001b[39m test1 description\n',]);
+      '\u001b[34m\u001b[1m\u001b[4mtest1\u001b[24m\u001b[22m\u001b[39m test1 description\n',
+      ]);
     done();
   });
   it('should all dipendince', (done)=> {
@@ -48,7 +49,8 @@ describe('description console test', ()=> {
       '\u001b[31m\u001b[1m\u001b[4mtest4\u001b[24m\u001b[22m\u001b[39m \u001b[31m\u001b[1mNo description given! add description message\u001b[22m\u001b[39m\n',
       '\u001b[31m\u001b[1m\u001b[4mtest5\u001b[24m\u001b[22m\u001b[39m \u001b[31m\u001b[1mNo description given! add description message\u001b[22m\u001b[39m\n',
       '\u001b[31m\u001b[1m\u001b[4mtest6\u001b[24m\u001b[22m\u001b[39m \u001b[31m\u001b[1mNo description given! add description message\u001b[22m\u001b[39m\n',
-      '\u001b[31m\u001b[1m\u001b[4mtest0\u001b[24m\u001b[22m\u001b[39m \u001b[31m\u001b[1mNo task given! remove description message\u001b[22m\u001b[39m\n',]);
+      '\u001b[31m\u001b[1m\u001b[4mtest0\u001b[24m\u001b[22m\u001b[39m \u001b[31m\u001b[1mNo task given! remove description message\u001b[22m\u001b[39m\n',
+      ]);
     done();
   });
   it('should dependency list', (done)=> {
@@ -63,7 +65,8 @@ describe('description console test', ()=> {
       '\u001b[34m\u001b[1mtest3\u001b[22m\u001b[39m \u001b[90m => \u001b[39m \u001b[90m[test4]\u001b[39m\n',
       '\u001b[34m\u001b[1mtest4\u001b[22m\u001b[39m \u001b[90m => \u001b[39m \u001b[90m[test5, test6]\u001b[39m\n',
       '\u001b[34m\u001b[1mtest5\u001b[22m\u001b[39m \u001b[90m => \u001b[39m \u001b[90m[]\u001b[39m\n',
-      '\u001b[34m\u001b[1mtest6\u001b[22m\u001b[39m \u001b[90m => \u001b[39m \u001b[90m[]\u001b[39m\n',]);
+      '\u001b[34m\u001b[1mtest6\u001b[22m\u001b[39m \u001b[90m => \u001b[39m \u001b[90m[]\u001b[39m\n',
+      ]);
     done();
   });
 });
