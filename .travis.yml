@@ -5,10 +5,9 @@ node_js:
   - "5.1"
   - "0.12"
 before_script:
-  - npm i -g babel-cli mocha jscs
-  - jscs -c .jscsrc ./src/*.js
-  - jscs -c .jscsrc ./test/*.js
+  - node_modules/.bin/jscs -c .jscsrc ./src/*.js
+  - node_modules/.bin/jscs -c .jscsrc ./test/*.js
   - mkdir -p dist/lib/ dist/test/
-  - babel src/index.js --out-file dist/lib/index.js
-  - babel test/test.js --out-file dist/test/test.js
-  - mocha dist/test/test.js
+  - node_modules/.bin/babel src/index.js --out-file dist/lib/index.js
+  - node_modules/.bin/babel test/test.js --out-file dist/test/test.js
+  - node_modules/.bin/mocha dist/test/test.js
