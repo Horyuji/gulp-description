@@ -13,41 +13,23 @@ $ npm install --save-dev gulp-description
 
 ```js
 
-var gulp = require('gulp');
-var gulpDep = require('gulp-description');
+const gulp = require('gulp');
+const gulpDep = require('gulp-description');
 
-gulp.task('help', function () {
-  gulpDep.help({
-    "main":[
-      "test1"
-    ],
-    "description":{
-      "test0" : "test0 description",
-      "test1" : "test1 description",
-      "test2" : "test2 description",
-      "test3" : "test3 description",
-    }
-  });
-});
-
-```
-
-### description config setting
-
-```json
-{
+let description = {
   "main":[
-    "help",
-    "serve"
+    "test1"
   ],
   "description":{
-    "default" : "run gulp serve task.",
-    "help" :  "view help",
-    "serve" : "start livereload development.",
-    "watch" : "subtask is livereload file watching",
-    "build" : "altJs and sass compile."
+    "test0" : "test0 description",
+    "test1" : "test1 description",
+    "test2" : "test2 description",
+    "test3" : "test3 description",
   }
-}
+};
+
+gulp.task('help', ()=> gulpDep.help(description));
+
 ```
 
 #### main
@@ -61,9 +43,8 @@ all gulp task description
 ### gulp task description is main only
 
 ```javascript
-  gulp.task('help',function(){
-    gulpDep.help(require('./taskDescription.json'));
-  });
+
+  gulp.task('help', ()=> gulpDep.help(description));
 
 ```
 
@@ -71,9 +52,7 @@ all gulp task description
 
 ```javascript
 
-  gulp.task('h:list',function(){
-    gulpDep.all(require('./taskDescription.json'));
-  });
+  gulp.task('help:all', ()=> gulpDep.all(description));
 
 ```
 
@@ -81,9 +60,7 @@ all gulp task description
 
 ```javascript
 
-  gulp.task('h:dep',function(){
-    gulpDep.dependency(require('./taskDescription.json'));
-  });
+  gulp.task('help:dep', ()=> gulpDep.dependency(description));
 
 ```
 

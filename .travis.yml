@@ -1,13 +1,13 @@
 sudo: false
 language: node_js
 node_js:
-  - '0.10'
-  - '0.12'
-  - 'iojs'
+  - "4.2"
+  - "5.1"
+  - "0.12"
 before_script:
-  - npm i -g babel mocha
-  - npm i
+  - node_modules/.bin/jscs -c .jscsrc ./src/*.js
+  - node_modules/.bin/jscs -c .jscsrc ./test/*.js
   - mkdir -p dist/lib/ dist/test/
-  - babel src/index.js --out-file dist/lib/index.js
-  - babel test/test.js --out-file dist/test/test.js
-  - mocha dist/test/test.js
+  - node_modules/.bin/babel src/index.js --out-file dist/lib/index.js
+  - node_modules/.bin/babel test/test.js --out-file dist/test/test.js
+  - node_modules/.bin/mocha dist/test/test.js
