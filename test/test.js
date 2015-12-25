@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var gulp = require('gulp');
-var gulpDipendince = require('../../index');
+var gulpDipendince = require('../lib/index');
 var stdout = require('test-console').stdout;
 var config = {
     main:[
